@@ -12,14 +12,22 @@ body {
     background-color: #ffffff;
     color: #333;
     line-height: 1.6;
+    padding-top: 80px; /* Compensa a altura do menu fixo */
 }
 
 
 /* Navegação */
+
 .Nave {
     background-color: #06271d;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.233);
     padding: 10px 0;
+    position: fixed;       
+    top: 0;
+    left: 0;
+    width: 100%;           
+    height: 70px;
+    z-index: 1000;         
 }
 
 #menu {
@@ -28,7 +36,12 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
-    position: relative;
+    position: fixed; /* Deixa o menu fixo */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #06271d; /* Garante fundo visível */
+    z-index: 1000; /* Garante que fique acima dos outros elementos */
 }
 
 .logo img {
