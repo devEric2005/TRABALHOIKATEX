@@ -1,0 +1,177 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Navegação */
+.Nave {
+    background-color: #06271d;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.233);
+    padding: 10px 0;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+}
+
+.logo img {
+    height: 60px;
+    padding: 10px 50px;
+}
+
+#menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#menu ul li a:hover {
+    color: #007bff;
+}
+
+/* Imagem central */
+.imagem-centro {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.imagem-centro img {
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Seção Sobre */
+.sobre {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sobre p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.imagem-empresa img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* rodape */
+
+footer {
+    background-color: #06271d;
+    color: white;
+    padding: 40px 20px;
+}
+
+.contatos {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 30px;
+}
+
+.contatos h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    
+}
+
+
+form {
+    display: flex;
+    gap: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    background-color: #2f773f;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0f4d12;
+}
+
+
+.mapa iframe {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* Responsividade celular */
+@media (max-width: 768px) {
+    #menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #menu ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .imagem-centro img {
+        width: 100%;
+    }
+
+    .imagem-empresa img {
+        width: 100%;
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
