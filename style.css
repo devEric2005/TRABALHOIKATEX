@@ -1,69 +1,78 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
-/* Corpo da página */
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
-    color: #333;
+    color: #333333;
     line-height: 1.6;
-    padding-top: 80px; /* Compensa a altura do menu fixo */
+    padding-top: 80px;
 }
 
-
-/* Navegação */
-
+/* Menu de navegação fixo */
 .Nave {
     background-color: #06271d;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.233);
-    padding: 10px 0;
-    position: fixed;       
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;           
+    width: 100%;
     height: 70px;
-    z-index: 1000;         
+    z-index: 1000;
 }
 
+/* Estilo principal do menu */
 #menu {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 10px;
-    position: fixed; /* Deixa o menu fixo */
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #06271d; /* Garante fundo visível */
-    z-index: 1000; /* Garante que fique acima dos outros elementos */
+    height: 100%;
+    padding: 0 20px;
 }
 
+/* Logo */
 .logo img {
     height: 60px;
-    padding: 10px 50px;
 }
 
-#menu ul {
+/* Ícone do menu mobile */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Caixa de seleção escondida (usada para controlar o menu mobile) */
+#menu-toggle {
+    display: none;
+}
+
+/* Lista do menu */
+.menu-list {
     list-style: none;
     display: flex;
     gap: 30px;
-    
 }
 
-#menu ul li a {
+/* Itens do menu */
+.menu-list li a {
     text-decoration: none;
-    color: #ffffff;
+    color: white;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-#menu ul li a:hover {
+.menu-list li a:hover {
     color: #007bff;
 }
 
@@ -80,7 +89,7 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Seção Sobre */
+/* Seção sobre */
 .sobre {
     max-width: 1200px;
     margin: 40px auto;
@@ -90,11 +99,17 @@ body {
     gap: 30px;
 }
 
+.sobre h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
 .sobre p {
     font-size: 18px;
     text-align: justify;
 }
 
+/* Imagem da empresa */
 .imagem-empresa img {
     width: 100%;
     max-width: 600px;
@@ -104,8 +119,7 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* rodape */
-
+/* Rodapé */
 footer {
     background-color: #06271d;
     color: white;
@@ -120,11 +134,9 @@ footer {
 }
 
 .contatos h2 {
-    margin-bottom: 15px;
     font-size: 22px;
-    
+    margin-bottom: 15px;
 }
-
 
 form {
     display: flex;
@@ -142,7 +154,7 @@ form input[type="submit"] {
 
 form input[type="submit"] {
     background-color: #2f773f;
-    color: rgb(255, 255, 255);
+    color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -151,40 +163,44 @@ form input[type="submit"]:hover {
     background-color: #0f4d12;
 }
 
-
 .mapa iframe {
     width: 100%;
     border-radius: 10px;
 }
 
-
-/* Responsividade celular */
+/* Estilo mobile */
 @media (max-width: 768px) {
-    #menu {
-        flex-direction: column;
-        align-items: flex-start;
+
+    .menu-icon {
+        display: block;
     }
 
-    #menu ul {
+    .menu-list {
+        display: none;
         flex-direction: column;
-        gap: 15px;
-        margin-top: 10px;
-    }
-
-    .imagem-centro img {
         width: 100%;
+        background-color: #06271d;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 10px 0;
     }
 
+    #menu-toggle:checked + .menu-icon + .menu-list {
+        display: flex;
+    }
+
+    .menu-list li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .imagem-centro img,
     .imagem-empresa img {
         width: 100%;
     }
+
+    form {
+        flex-direction: column;
+    }
 }
-
-
-html {
-    scroll-behavior: smooth;
-}
-
-
-
-
