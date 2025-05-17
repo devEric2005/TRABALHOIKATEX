@@ -52,7 +52,7 @@ body {
     padding: 10px;
 }
 
-/* Caixa de seleção escondida (usada para controlar o menu mobile) */
+/* Caixa do menu */
 #menu-toggle {
     display: none;
 }
